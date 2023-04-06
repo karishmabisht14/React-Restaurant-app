@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
-import Header from './components/Layout/Header';
-import Meals from './components/Meals/Meals';
-import AvailableMeals from './components/Meals/AvailableMeals';
+import "./App.css";
+import Header from "./components/Layout/Header";
+import Meals from "./components/Meals/Meals";
 
+import Cart from "./components/Cart/Cart";
 
 const App = () => {
   return (
     <React.Fragment>
+      <Cart />
       <Header />
       <main>
         <Meals />
-        <AvailableMeals />
       </main>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default App;
