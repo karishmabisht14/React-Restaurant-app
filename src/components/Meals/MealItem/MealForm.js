@@ -12,14 +12,11 @@ const MealForm = (props) => {
     const quantity = parseInt(
       document.getElementById("amount" + props.id).value
     );
-
     cartCtx.addItem({ ...props.item, quantity: quantity });
-    console.log("inside the addItemsToCart = ", cartCtx.items);
   };
 
   return (
     <form className={classes.form}>
-      {console.log("inside the MealForm = ", cartCtx.items)}
       <Input
         input={{
           id: "amount" + props.id,

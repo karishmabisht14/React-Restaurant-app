@@ -13,7 +13,7 @@
 }
 
 .summary {
-  width: 36rem;
+  width: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,11 +30,6 @@
   padding: 0.25rem 0.75rem;
   border-radius: 6px;
   color: #363636;
-}
-
-.amount {
-  font-weight: bold;
-  color: #8a2b06;
 }
 
 .actions {
