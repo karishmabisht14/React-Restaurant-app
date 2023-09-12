@@ -7,6 +7,7 @@ import CartItem from "./CartItem";
 
 const Cart = props => {
   const cartCtx = useContext(CartContext);
+
   const totalAmount = (cartCtx.items.reduce((acc, current) => {
     return acc + current.price * current.quantity;
   }, 0)).toFixed(2);
@@ -18,6 +19,12 @@ const Cart = props => {
       ))}
     </ul>
   );
+
+  const ordersHandler = () => {
+    cartCtx.orders();
+    alert("Thank you for your order...");
+  }
+
   return (
     <Modal onClick={props.onClose}>
       {cartItems}
@@ -29,7 +36,7 @@ const Cart = props => {
         <button className={classes["button--alt"]} onClick={props.onClose}>
           Close
         </button>
-        <button className={classes.button}>Order</button>
+        <button className={classes.button} onClick={ordersHandler}>Order</button>
       </div>
     </Modal>
   );
